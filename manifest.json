@@ -1,23 +1,34 @@
 {
-    "name":"coupon finder",
+    "name":"coder's Diary",
     "version":"1.0",
-    "description" : "coupon finder...",
+    "description" : "Submits all the problem submitted by you on coding platforms like Leetcode and Geeksforgeeks",
     "permissions":[
+        "webRequest",
         "activeTab",
         "<all_urls>",
         "tabs"
     ],
+    "browser_action":{
+        "default_popup": "./popup.html"
+    },
+    "icons":{
+        "16": "./icons/diary16.png",
+        "32": "./icons/diary32.png",
+       "64": "./icons/diary64.png"
+      },
     "background" : {
         "page": "background.html",
-        "persistent":false
+        "persistent": true
     },
     "content_scripts":[
         {
-            "matches":["<all_urls>"],
+            "matches":["https://leetcode.com/problems/*","https://practice.geeksforgeeks.org/problems/*"],
             "js":["app.js"],
-            "run_at":"document_end"
+            "run_at":"document_idle"
         }
     ],
     "manifest_version" : 2,
-    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com; object-src 'self'"
     }
+
+    

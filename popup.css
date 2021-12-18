@@ -1,0 +1,16 @@
+body{
+    width: 200px;
+  background-color: #dfd9d99d !important;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.75s ease;
+  font-size: 13px;
+
+  font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  height: 200px;
+  /* background-image: url('icons/diary.png'); */
+}
+
+u:hover {
+    background-color: yellow;
+  }
