@@ -1,5 +1,4 @@
 let domain=window.location.hostname;
-
 // console.log("here :",document.getElementsByClassName("nav-item-container__16kF"));
 // console.log(domain);
 domain=domain.replace('http://','').replace('https://','').replace('www.','').split(/[/?#.]/)[0];
